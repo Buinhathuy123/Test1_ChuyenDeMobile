@@ -1,20 +1,131 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import {
+  Text,
+  View,
+  SafeAreaView,
+  ScrollView,
+  Image,
+  TextInput,
+} from "react-native-web";
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    <SafeAreaView
+      style={{
+        flex: 1,
+        padding: 20,
+        backgroundColor: "#fff",
+      }}
+    >
+      {/* Title */}
+      <Text
+        style={{
+          fontSize: 24,
+          fontWeight: "bold",
+          textAlign: "center",
+          marginBottom: 20,
+        }}
+      >
+        Programming Languages
+      </Text>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+      {/* Horizontal Image List */}
+   <View
+  style={{
+    height: 240,           // 👈 ép chiều cao vùng cuộn
+    justifyContent: "center",
+  }}
+>
+  <ScrollView
+    horizontal
+    showsHorizontalScrollIndicator={false}
+    contentContainerStyle={{
+      alignItems: "center", // 👈 ảnh nằm giữa theo chiều dọc
+      paddingHorizontal: 10,
+    }}
+  >
+    <Image
+      source={require("./image/c++.jpeg")}
+      style={{
+        width: 220,
+        height: 220,
+        marginRight: 25,
+        borderRadius: 16,
+        backgroundColor: "#f2b66d",
+      }}
+    />
+
+    <Image
+      source={require("./image/c.png")}
+      style={{
+        width: 220,
+        height: 220,
+        marginRight: 25,
+        borderRadius: 16,
+        backgroundColor: "#f2b66d",
+      }}
+    />
+
+    <Image
+      source={require("./image/elixir.jpeg")}
+      style={{
+        width: 220,
+        height: 220,
+        marginRight: 25,
+        borderRadius: 16,
+        backgroundColor: "#f2b66d",
+      }}
+    />
+
+    <Image
+      source={require("./image/java.jpeg")}
+      style={{
+        width: 220,
+        height: 220,
+        marginRight: 25,
+        borderRadius: 16,
+        backgroundColor: "#f2b66d",
+      }}
+    />
+
+    <Image
+      source={require("./image/js.png")}
+      style={{
+        width: 220,
+        height: 220,
+        marginRight: 25,
+        borderRadius: 16,
+        backgroundColor: "#f2b66d",
+      }}
+    />
+
+    <Image
+      source={require("./image/python.jpeg")}
+      style={{
+        width: 220,
+        height: 220,
+        marginRight: 25,
+        borderRadius: 16,
+        backgroundColor: "#f2b66d",
+      }}
+    />
+  </ScrollView>
+</View>
+
+
+      {/* Text Input */}
+      <TextInput
+        placeholder="What is your favorite programming language from the list above?"
+        style={{
+          borderWidth: 1,
+          borderColor: "#ccc",
+          borderRadius: 8,
+          padding: 12,
+          fontSize: 16,
+        }}
+      />
+    </SafeAreaView>
+  );
+};
+
+export default App;
