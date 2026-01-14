@@ -29,10 +29,10 @@ const App = () => {
         Programming Languages
       </Text>
 
-      {/* Horizontal Image List */}
+  
    <View
   style={{
-    height: 240,           // 👈 ép chiều cao vùng cuộn
+    height: 240,           
     justifyContent: "center",
   }}
 >
@@ -40,7 +40,7 @@ const App = () => {
     horizontal
     showsHorizontalScrollIndicator={false}
     contentContainerStyle={{
-      alignItems: "center", // 👈 ảnh nằm giữa theo chiều dọc
+      alignItems: "center", 
       paddingHorizontal: 10,
     }}
   >
@@ -113,7 +113,7 @@ const App = () => {
 </View>
 
 
-      {/* Text Input */}
+
       <TextInput
         placeholder="What is your favorite programming language from the list above?"
         style={{
